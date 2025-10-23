@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classes — Fit For You</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body data-page="classes">
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <svg width="34" height="34" viewBox="0 0 24 24"><path d="M7 4h4v4H7zM13 4h4v4h-4zM7 10h4v4H7zM13 10h4v10h-4zM7 16h4v4H7z" fill="currentColor"/></svg>
+      <span>Fit For You</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html" class="active">Classes</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Class Schedule</h1>
+
+    <div class="filters">
+      <label>
+        <span>Day</span>
+        <select id="filter-day">
+          <option value="all">All</option>
+          <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+          <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+      </label>
+      <label>
+        <span>Type</span>
+        <select id="filter-type">
+          <option value="all">All</option>
+          <option>Strength</option>
+          <option>HIIT</option>
+          <option>Mobility</option>
+          <option>Conditioning</option>
+        </select>
+      </label>
+      <input id="search-class" type="search" placeholder="Search class or coach"/>
+    </div>
+
+    <div id="class-grid" class="grid-3">
+      <!-- Cards injected by JS -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Fit For You. All rights reserved.</p>
+  </footer>
+</body>
+</html>

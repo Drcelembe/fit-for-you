@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Class — Fit For You</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body data-page="booking">
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <svg width="34" height="34" viewBox="0 0 24 24"><path d="M7 4h4v4H7zM13 4h4v4h-4zM7 10h4v4H7zM13 10h4v10h-4zM7 16h4v4H7z" fill="currentColor"/></svg>
+      <span>Fit For You</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="booking.html" class="active">Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="page-title">Book Your Class</h1>
+
+    <section id="selected-class" class="card">
+      <h2>Selected Class</h2>
+      <p><strong id="sel-name">—</strong> with <span id="sel-coach">—</span> on <span id="sel-day">—</span> at <span id="sel-time">—</span></p>
+      <button id="change-class" class="btn btn-outline-small">Change</button>
+    </section>
+
+    <form id="booking-form" class="form card">
+      <h2>Attendee Details</h2>
+      <div class="form-row">
+        <label>Full Name
+          <input type="text" id="fullName" required minlength="2" />
+        </label>
+        <label>Email
+          <input type="email" id="email" required />
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Phone
+          <input type="tel" id="phone" placeholder="+27..." />
+        </label>
+        <label>Membership
+          <select id="membership" required>
+            <option value="">Select</option>
+            <option>Drop-In</option>
+            <option>Monthly</option>
+            <option>Annual</option>
+          </select>
+        </label>
+      </div>
+
+      <h2>Schedule</h2>
+      <div class="form-row">
+        <label>Date
+          <input type="date" id="date" required/>
+        </label>
+        <label>Time
+          <select id="timeSlot" required>
+            <option value="">Select</option>
+            <option>05:30</option><option>06:30</option><option>08:00</option>
+            <option>12:00</option><option>17:00</option><option>18:00</option>
+          </select>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-cta">Confirm Booking</button>
+    </form>
+  </main>
+
+  <div id="confirm-overlay" class="overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal card">
+      <h3>Booking Confirmed ✅</h3>
+      <p id="confirm-text"></p>
+      <div class="modal-actions">
+        <a class="btn btn-accent" href="classes.html">Book Another</a>
+        <a class="btn btn-outline" href="index.html">Done</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Fit For You. All rights reserved.</p>
+  </footer>
+</body>
+</html>

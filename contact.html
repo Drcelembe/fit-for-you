@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Fit For You</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <svg width="34" height="34" viewBox="0 0 24 24"><path d="M7 4h4v4H7zM13 4h4v4h-4zM7 10h4v4H7zM13 10h4v10h-4zM7 16h4v4H7z" fill="currentColor"/></svg>
+      <span>Fit For You</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="page-title">Contact Us</h1>
+    <form id="contact-form" class="form card">
+      <div class="form-row">
+        <label>Name
+          <input id="c-name" required minlength="2"/>
+        </label>
+        <label>Email
+          <input id="c-email" type="email" required/>
+        </label>
+      </div>
+      <label>Message
+        <textarea id="c-message" rows="5" required minlength="10"></textarea>
+      </label>
+      <button class="btn btn-accent" type="submit">Send Message</button>
+      <p id="contact-success" class="success hidden">Message received. We’ll revert.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Fit For You. All rights reserved.</p>
+  </footer>
+</body>
+</html>
